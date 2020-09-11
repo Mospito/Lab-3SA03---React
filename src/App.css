@@ -27,7 +27,15 @@
 .App-link {
   color: #61dafb;
 }
-
+.card {
+  display: inline-block;
+  text-align: center;
+  width: 3em;
+  font-size: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 1em;
+  user-select: none;
+ }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +43,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*Class*/
+.card {
+  color : blue
+
+}
+/*ID*/
+#header {
+  color : red
 }

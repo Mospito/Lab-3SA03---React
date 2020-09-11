@@ -3,19 +3,21 @@ import CharacterCard from './CharacterCard'
 
 import _ from 'lodash';
 const prepareStateFromWord = (given_word) => {
- let word = given_word.toUpperCase()
- let chars = _.shuffle(Array.from(word))
- return {
- word,
- chars,
- attempt: 1,
- guess: '',
- completed: false
- }
-}
+    let word = given_word.toUpperCase()
+    let chars = _.shuffle(Array.from(word))
+    return {
+    word,
+    chars,
+    attempt: 1,
+    guess: '',
+    completed: false
+    }
+   }
 
 // const activationHandler = c => { console.log(`${c} has been activated.`) } 
 export default function WordCard(props){
+
+ 
     const [state, setState] = useState({
         word: '',
         chars: '',
@@ -57,7 +59,9 @@ export default function WordCard(props){
 
     <div>
         
-    { Array.from(state.chars).map((c, i) => <CharacterCard value={c} key={i} activationHandler={activationHandler}/>) }
+    { Array.from(state.chars).map((c, i) => 
+    <CharacterCard value={c} key={i} activationHandler={activationHandler}
+    attempt = {state.attempt}/>) }
     </div>
  );
 }
